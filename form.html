@@ -1,28 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
     <title>form</title>
+
+    <style>
+        input.white-placeholder::placeholder {
+            color: white !important;
+
+        }
+
+        input.black-placeholder::placeholder {
+            color: black !important;
+        }
+    </style>
 </head>
+
 <body>
 
-    <div class="container"></div>
+    <div class="container bg-secondary mx-auto mt-5 p-3 row">
+        <div class="form-container rounded-start bg-light col-sm p-3 text-primary  ">
+            <!-- General Information Form -->
+            <div class="form">
+                <h4>General Information</h4>
+                <form>
+                    <select class="form-select bg-transparent" id="title" required>
+                        <option value="Title" disabled selected>Title</option>
+                        <option value="mr">Mr</option>
+                        <option value="mrs">Mrs</option>
+                        <option value="miss">Miss</option>
+                    </select>
+
+                    <div class="row">
+                        <div class="form-group col mt-3">
+                            <input type="text" class="black-placeholder form-control bg-transparent" id="firstName"
+                                placeholder="Enter first name" required>
+                        </div>
+                        <div class="form-group col mt-3">
+                            <input type="text" class="black-placeholder form-control bg-transparent" id="lastName"
+                                placeholder="Enter last name" required>
+                        </div>
+                    </div>
+
+                    <select class="form-select mt-3 bg-transparent" id="position" required>
+                        <option value="" disabled selected>Position</option>
+                        <option value="er">Er</option>
+                        <option value="dr">Dr</option>
+                        <option value="nr">Nr</option>
+                    </select>
+
+                    <div class="form-group mt-3">
+                        <input type="text" class="black-placeholder form-control bg-transparent" id="position"
+                            placeholder="Position">
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="form-group col ">
+                            <input type="black-placeholder text" class="black-placeholder form-control bg-transparent"
+                                id="ba" placeholder="Bussines Arena">
+                        </div>
+
+                        <select class=" col form-select me-3 bg-transparent" id="employess" required>
+                            <option value="" disabled selected>Employees</option>
+                            <option value="onw">1</option>
+                            <option value="two">2</option>
+                            <option value="three">3</option>
+                        </select>
+                    </div>
+                    <!-- Add more general information fields as needed -->
+                </form>
+            </div>
+        </div>
+
+        <!-- Second form -->
+
+        <div class="form col rounded-end bg-primary text-light p-3">
+            <h4>Contact Information</h4>
+            <form>
+                <div class="form-group mt-3">
+                    <input type="text" class="white-placeholder form-control bg-transparent text-light " id="street"
+                        placeholder="Street + Nr">
+                </div>
+
+                <div class="form-group mt-3">
+                    <input type="text" class="white-placeholder form-control bg-transparent text-light" id="additional"
+                        placeholder="Additional Information">
+                </div>
+
+                <div class="row">
+                    <div class="form-group col mt-3">
+                        <input type="text" class="white-placeholder form-control bg-transparent text-light" id="zip"
+                            placeholder="Zip Code" required>
+                    </div>
+                    <div class="form-group col mt-3">
+                        <input type="text" class="white-placeholder form-control bg-transparent text-light" id="place"
+                            placeholder="Place" required>
+                    </div>
+                </div>
+
+                <div class="form-group mt-3">
+                    <input type="text" class="white-placeholder form-control bg-transparent text-light" id="country"
+                        placeholder="Country">
+                </div>
+
+                <div class="row">
+                    <div class="form-group col mt-3">
+                        <input type="text" class="white-placeholder form-control bg-transparent text-light"
+                            id="mobile_code" placeholder="Code +" required>
+                    </div>
+                    <div class="form-group col mt-3">
+                        <input type="text" class="white-placeholder form-control bg-transparent text-light"
+                            id="phone_number" placeholder="Phone Number" required>
+                    </div>
+                </div>
+
+                <div class="form-group mt-3">
+                    <input type="email" class="white-placeholder form-control bg-transparent text-light" id="email"
+                        placeholder="Your Email">
+                </div>
+
+                <div class="form-group form-check mt-3">
+                    <input type="checkbox" class="form-check-input bg-secondary" id="termsCheckbox" required>
+                    <label class="form-check-label" for="termsCheckbox">
+                        I do accept the <a class="text-light" href="terms">Terms and Conditions</a> of your site
+                    </label>
+                </div>
+
+                <!-- Add more contact information fields as needed -->
+                <button type="button" class="btn btn-light btn-block mt-3">Register</button>
+            </form>
+        </div>
+
+    </div>
 
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
 </body>
+
 </html>
